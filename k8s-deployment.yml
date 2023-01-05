@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-deployment.yml
+  labels:
+    type: django
+spec:
+  selector:
+    matchLabels:
+      type: django
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        type: django
+        version: v16
+    spec:
+      containers:
+      - name: k8s
+        image: lllth94/k8s-django:latest
+        envFrom:
+          - configMapRef:
+              name: mysql-cm
+          - secretRef:
+              name: mysql-sec
+        ports:
+        - containerPort: 8000
+        resources:
+          requests:
+            cpu: 100m
+          limits:
+            cpu: 200m
