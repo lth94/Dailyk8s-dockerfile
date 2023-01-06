@@ -13,7 +13,6 @@ spec:
     metadata:
       labels:
         type: django
-        version: v16
     spec:
       containers:
       - name: k8s
