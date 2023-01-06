@@ -3,6 +3,4 @@ RUN git clone https://github.com/lth94/django.git
 WORKDIR /django
 RUN pip install -r /django/requirements.txt
 EXPOSE 8000
-RUN python manage.py makemigrations
-RUN python manage.py migrate
 CMD python manage.py runserver
