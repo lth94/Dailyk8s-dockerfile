@@ -1,4 +1,4 @@
-FROM python:3
+FROM python:3.9
 RUN git clone https://github.com/lth94/django.git
 WORKDIR /django
 RUN pip install -r /django/requirements.txt
