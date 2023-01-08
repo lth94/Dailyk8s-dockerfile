@@ -23,7 +23,7 @@ spec:
           - secretRef:
               name: mysql-sec
         ports:
-        - containerPort: 8000
+        - containerPort: 8001
         resources:
           requests:
             cpu: 100m
