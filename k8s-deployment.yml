@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k8s-deployment.yml
+  name: k8s-deployment
   labels:
     type: django
 spec:
