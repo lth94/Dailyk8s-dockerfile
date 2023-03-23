@@ -1,5 +1,5 @@
 FROM python:3.9
-RUN git clone https://github.com/lth94/django.git
+RUN git clone https://github.com/lth94/Dailyk8s-django.git
 WORKDIR /django
 RUN pip install -r /django/requirements.txt
 EXPOSE 8001
